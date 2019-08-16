@@ -1,0 +1,25 @@
+IF
+GlobalLT("Bla_Lenshunt","Global",2)
+Global("Bla_Lenscrew","ar1800",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1800",1)
+Deactivate("ar18prie")
+Deactivate("ar18arch")
+Deactivate("ar18dwaf")
+Deactivate("ar18mage")
+Deactivate("ar18fam")
+END
+
+IF
+Global("Bla_Lenshunt","Global",2)
+Global("Bla_Lenscrew","ar1800",1)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1800",2)
+Activate("ar18prie")
+Activate("ar18arch")
+Activate("ar18dwaf")
+Activate("ar18mage")
+Activate("ar18fam")
+END

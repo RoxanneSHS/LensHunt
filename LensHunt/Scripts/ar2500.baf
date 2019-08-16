@@ -1,0 +1,25 @@
+IF
+Global("ElvenCityTree","GLOBAL",0)
+PartyHasItem("Bla_Lat1")
+Global("Bla_Lenshunt","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenshunt","Global",1)
+CreateCreature("c6warsa1",[784.1076],0)
+CreateCreature("c6warsa2",[721.1106],0)
+Continue()
+END
+
+IF
+Global("Bla_Lenshunt","Global",2)
+PartyHasItem("Bla_Lat1")
+PartyHasItem("c6lens1")
+PartyHasItem("c6lens2")
+PartyHasItem("c6lens3")
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenshunt","Global",3)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("Bla_Cut1")
+END

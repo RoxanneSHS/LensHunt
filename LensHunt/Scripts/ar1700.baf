@@ -1,0 +1,70 @@
+IF
+Global("Bla_Lenshunt","Global",2)
+Global("Bla_Lenscrew","ar1700",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1700",1)
+SpawnPtDeactivate("Spawn Point 1")
+SpawnPtDeactivate("Spawn Point 2")
+CreateCreature("bla_ogr3",[3413.311],7)
+CreateCreature("bla_ogr3",[3236.376],10)
+CreateCreature("bla_ogr3",[3258.410],12)
+CreateCreature("bla_ogr3",[3080.340],13)
+END
+
+IF
+Global("Bla_Lenscrew","ar1700",1)
+NumDead("bla_ogr3",3)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1700",2)
+CreateCreature("bla_ogr5",[3090.1117],8)
+CreateCreature("bla_ogr2",[3041.1170],9)
+CreateCreature("bla_ogr2",[3161.1272],7)
+END
+
+IF
+Global("Bla_Lenscrew","ar1700",3)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1700",4)
+CreateCreature("bla_ogr1",[2235.2466],10)
+CreateCreature("bla_ogr4",[2261.2404],11)
+CreateCreature("bla_ogr2",[2148.2403],10)
+CreateCreature("bla_ogr2",[2223.2446],13)
+END
+
+IF
+Global("Bla_Lenscrew","ar1700",4)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1700",5)
+ActionOverride(Player1,MoveToObjectFollow("Bla_ogr5"))
+ActionOverride(Player2,MoveToObjectFollow(Player1))
+ActionOverride(Player3,MoveToObjectFollow(Player1))
+ActionOverride(Player4,MoveToObjectFollow(Player2))
+ActionOverride(Player5,MoveToObjectFollow(Player1))
+ActionOverride(Player6,MoveToObjectFollow(Player2))
+END
+
+IF
+Global("Bla_Lenscrew","ar1700",7)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar1700",8)
+CreateCreature("bla_ogr2",[2431.2815],8)
+CreateCreature("bla_ogr2",[2478.2015],9)
+CreateCreature("bla_ogr2",[1706.2283],14)
+CreateCreature("bla_ogr2",[1390.2493],13)
+CreateCreature("bla_ogr2",[747.2803],2)
+END
+
+IF
+GlobalGT("Bla_Lenscrew","ar1700",7)
+Global("Respawn","ar1700",0)
+THEN
+RESPONSE #100
+SetGlobal("Respawn","ar1700",1)
+SpawnPtActivate("Spawn Point 1")
+SpawnPtActivate("Spawn Point 2")
+END

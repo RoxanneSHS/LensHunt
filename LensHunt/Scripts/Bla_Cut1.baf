@@ -1,0 +1,24 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+SetGlobal("Bla_Lenshunt","Global",4)
+FadeToColor([30.0],0)
+Wait(2)
+TakePartyItem("Bla_Lat1")
+TakePartyItem("c6lens1")
+TakePartyItem("c6lens2")
+TakePartyItem("c6lens3")
+Wait(2)
+DestroyItem("Bla_Lat1")
+DestroyItem("c6lens1")
+DestroyItem("c6lens2")
+DestroyItem("c6lens3")
+Wait(2)
+GiveItemCreate("c6lantho",Player1,0,0,0)
+Wait(2)
+FadeFromColor([30.0],0)
+EndCutSceneMode()
+ActionOverride(Player1,DisplayStringHead(Myself,@103)) 
+END

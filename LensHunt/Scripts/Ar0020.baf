@@ -1,0 +1,10 @@
+IF
+Global("Bla_maps","ar0020",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_maps","ar0020",1)
+HideAreaOnMap("ar1700")
+HideAreaOnMap("ar1800")
+HideAreaOnMap("ar2600")
+Continue()
+END
