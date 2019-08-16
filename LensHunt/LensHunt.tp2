@@ -58,6 +58,7 @@ EXTEND_TOP ~ar2500.bcs~ ~LensHunt/scripts/ar2500.baf~
 EXTEND_TOP ~ar1800.bcs~ ~LensHunt/scripts/ar1800.baf~
 EXTEND_TOP ~ar1700.bcs~ ~LensHunt/scripts/ar1700.baf~
 EXTEND_BOTTOM ~ar0020.bcs~ ~LensHunt/scripts/ar0020.baf~
+EXTEND_BOTTOM ~ar2600.bcs~ ~LensHunt/scripts/ar2600.baf~
 
 COMPILE 
 ~LensHunt/scripts/Bla_Cut1.baf~

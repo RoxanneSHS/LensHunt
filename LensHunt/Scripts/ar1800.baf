@@ -23,3 +23,17 @@ Activate("ar18dwaf")
 Activate("ar18mage")
 Activate("ar18fam")
 END
+
+IF
+Global("Bla_Lenshunt","Global",2)
+PartyHasItem("Bla_Lat1")
+PartyHasItem("c6lens1")
+PartyHasItem("c6lens2")
+PartyHasItem("c6lens3")
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenshunt","Global",3)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("Bla_Cut1")
+END
