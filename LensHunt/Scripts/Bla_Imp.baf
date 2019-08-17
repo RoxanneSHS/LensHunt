@@ -25,16 +25,16 @@ THEN
 RESPONSE #100
 StartCutSceneMode()
 Wait(1)
-CreateCreatureObjectOffset("Orc03",Player1,[100.100])  // Orc Priest
-CreateCreatureObjectDoor("rakmah01",Player2,0,0,0)  // Maharajah
-CreateCreatureObjectOffset("Orc02",Player3,[100.-100])  // Orc Archer
-CreateCreatureObjectOffset("Orc03",Player5,[0.0])  // Orc Priest
-CreateCreatureObjectOffset("goliro01",Player3,[40.40])  // Iron Golem
-CreateCreatureObjectOffset("Orc03",Player6,[100.100])  // Orc Priest
-CreateCreatureObjectDoor("demnab02",Player5,0,0,0)  // Nabassu
-CreateCreatureObjectOffset("Orc02",Player4,[100.-100])  // Orc Archer
-CreateCreatureObjectDoor("orc02",Player4,0,0,0)  // Orc Archer
-CreateCreatureObjectOffset("goliro01",Player6,[40.40])  // Iron Golem
+CreateCreatureObjectOffset("Orc03",Player1,[100.100])
+CreateCreatureObjectDoor("rakmah01",Player2,0,0,0)
+CreateCreatureObjectOffset("Orc02",Player3,[100.-100])
+CreateCreatureObjectOffset("Orc03",Player5,[0.0])
+CreateCreatureObjectOffset("goliro01",Player3,[40.40])
+CreateCreatureObjectOffset("Orc03",Player6,[100.100])
+CreateCreatureObjectDoor("demnab02",Player5,0,0,0)
+CreateCreatureObjectOffset("Orc02",Player4,[100.-100])
+CreateCreatureObjectDoor("orc02",Player4,0,0,0)
+CreateCreatureObjectOffset("goliro01",Player6,[40.40])
 Wait(1)
 EndCutSceneMode()
 SetGlobal("Bla_ImpHunt","AR2600",5)
