@@ -1,0 +1,9 @@
+IF
+Global("Bla_GemIn","ar2401",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_GemIn","ar2401",1)
+ActionOverride("Container 3",CreateItem("Misc45",0,0,0))
+ActionOverride("Container 3",CreateItem("Misc42",0,0,0))
+Continue()
+END

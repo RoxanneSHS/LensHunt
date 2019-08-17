@@ -36,6 +36,11 @@ COPY_EXISTING ~ar18prie.cre~ ~override~
 WRITE_ASCII 0x250 ~Pries14a~
 ADD_CRE_ITEM ~c6lens1~ #0 #0 #0 ~IDENTIFIED~ ~inv12~
 
+COPY_EXISTING ~thumb.sto~ ~override~
+  ADD_STORE_ITEM ~Misc45~ #1 #0 #0 ~IDENTIFIED~ #3
+COPY_EXISTING ~roger.sto~ ~override~
+  ADD_STORE_ITEM ~misc45~ #2 #0 #0 ~IDENTIFIED~ #3
+
 COPY ~LensHunt/CRE/Bla_Ogr1.CRE~ ~override~
 SAY NAME1 @105
 SAY NAME2 @105
@@ -51,9 +56,14 @@ SAY NAME2 @106
 COPY ~LensHunt/CRE/Bla_Ogr5.CRE~ ~override~
 SAY NAME1 @104
 SAY NAME2 @104
+COPY ~LensHunt/CRE/Bla_Imp.CRE~ ~override~
+SAY NAME1 @107
+SAY NAME2 @107
+COPY ~LensHunt/CRE/RUSTS.BMP~ ~override~
 
 COMPILE ~LensHunt/Dialog~
 
+EXTEND_TOP ~ar2401.bcs~ ~LensHunt/scripts/ar2401.baf~
 EXTEND_TOP ~ar2500.bcs~ ~LensHunt/scripts/ar2500.baf~
 EXTEND_TOP ~ar1800.bcs~ ~LensHunt/scripts/ar1800.baf~
 EXTEND_TOP ~ar1700.bcs~ ~LensHunt/scripts/ar1700.baf~
@@ -63,3 +73,4 @@ EXTEND_BOTTOM ~ar2600.bcs~ ~LensHunt/scripts/ar2600.baf~
 COMPILE 
 ~LensHunt/scripts/Bla_Cut1.baf~
 ~LensHunt/scripts/Bla_Ogr.baf~
+~LensHunt/scripts/Bla_Imp.baf~

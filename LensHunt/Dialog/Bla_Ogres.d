@@ -20,17 +20,18 @@ DO~SetGlobal("Bla_Lenscrew","ar1700",6)~
 ==Bla_ogr4~Maybe they come with more shining jewels for Cyrvisnea? Big Sothillis' mate deserves same respect like boss.~
 ==Bla_ogr1~You have gift for my mate, <PRO_RACE>? Maybe can let you live for transgressing Sothillis Empire.~
 END
-++~That blue lense you wear on the chain around your neck, Cyrvisnea - nice as it is, but we need it.~+ Boss2
+++~That blue lens you wear on the chain around your neck, Cyrvisnea - nice as it is, but we need it.~+ Boss2
 ++~Your mate carries an item on her that belongs to the elves of Tethyr. We come to recapture it because it is needed for its true task urgently.~+ Boss2
 ++~I think you are nothing but a bandit, Sythillis. Your mate carries the stolen lens of the Lanthorn like a trophy.~ + Boss2
 
 CHAIN
 IF~~THEN Bla_ogr1 Boss2
-~Sothillis not be new ruler of Small Teeth because he and Cyrvisnea be fools. You strong and determined. You want one jewel and you give others for that one. Price for blue lense be two rogue stones and we part in peace.~
+~Sothillis not be new ruler of Small Teeth because he and Cyrvisnea be fools. You strong and determined. You want one jewel and you give others for that one. Price for blue lens be two rogue stones and we part in peace.~
 ==Bla_ogr4~But that jewel is mine, you gave as gift for beautiful mate!~
 ==Bla_ogr1~Hush, female. We not risk many men's lives for fight over shinies. You get better decoration in return if that <PRO_RACE> not foolish.~
 END
-IF~NumItemsPartyLT("Misc45",2)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~ EXTERN Bla_ogr4 Boss3
+IF~NumItemsPartyLT("Misc45",2) CheckStatLT(LastTalkedToBy,12,CHR)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~ EXTERN Bla_ogr4 Boss3
+IF~NumItemsPartyLT("Misc45",2) CheckStatGT(LastTalkedToBy,11,CHR)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~DO~SetGlobal("Bla_WaitRog","LOCALS",1)~ EXTERN Bla_ogr4 Boss8
 IF~PartyHasItem("Misc42")~THEN REPLY~I make you a better offer. This diamond is beautiful and worth twice as much as rogue stones or blue lenses, see how it sparkles.~ EXTERN Bla_ogr4 Boss5
 IF~PartyGoldGT(19999)~THEN REPLY~I make you a better offer. For 20000 GP you can buy your girl anything she can ask for. ~ EXTERN Bla_ogr4 Boss6
 IF~NumItemsPartyGT("Misc45",1)~THEN REPLY~What a luck! Look here, I have two rogue stones with me.~EXTERN Bla_ogr4 Boss7
@@ -64,3 +65,15 @@ IF~~THEN Bla_ogr4 Boss7
 DO~SetGlobal("Bla_Lenscrew","ar1700",9)~
 ==Bla_ogr1~We are rulers of Small Teeth and stand to our word.~
 ==Bla_ogr4~We honorable ogres, you have deal, <PRO_RACE>.~DO~TakePartyItemNum("Misc45",2) GiveItem("c6Lens2",Player1)~EXIT
+
+CHAIN
+IF~~THEN Bla_ogr4 Boss8
+~Cyrvisnea believes <PRO_RACE>. Will not lie, makes no sense to lie because Sothillis soon rule all of Amn and can punish liar. You come with rogue stones soon and we make deal.~EXIT
+
+CHAIN
+IF~Global("Bla_WaitRog","LOCALS",1)~THEN Bla_ogr4 Boss11
+~You come with shinies to make exchange for blue lens?~
+END
+IF~NumItemsPartyLT("Misc45",2)~THEN REPLY~I have not found them yet but I'm still searching.~ EXTERN Bla_ogr4 Boss3
+++~I have no time for your games, ugly ogre. Give me the lens and you may survive. Otherwise I take it from your corpse.~ EXTERN Bla_ogr4 Boss4
+IF~NumItemsPartyGT("Misc45",1)~THEN REPLY~Look here, I have two rogue stones with me.~EXTERN Bla_ogr4 Boss7

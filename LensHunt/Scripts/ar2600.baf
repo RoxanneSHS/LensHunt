@@ -1,5 +1,14 @@
 IF
 Global("Bla_Lenshunt","Global",2)
+Global("Bla_Lenscrew","ar2600",0)
+THEN
+RESPONSE #100
+SetGlobal("Bla_Lenscrew","ar2600",1)
+CreateCreature("bla_imp",[1186.2953],7)
+END
+
+IF
+Global("Bla_Lenshunt","Global",2)
 PartyHasItem("Bla_Lat1")
 PartyHasItem("c6lens1")
 PartyHasItem("c6lens2")
