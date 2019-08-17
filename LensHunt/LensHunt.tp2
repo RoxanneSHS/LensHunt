@@ -1,7 +1,7 @@
 BACKUP ~LensHunt/backup~
 AUTHOR ~Roxanne~
 
-VERSION ~V0.1~
+VERSION ~V0.2~
 
 AUTO_TRA ~LensHunt/translations/%s~
 LANGUAGE ~English~

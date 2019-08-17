@@ -31,7 +31,7 @@ IF~~THEN Bla_ogr1 Boss2
 ==Bla_ogr1~Hush, female. We not risk many men's lives for fight over shinies. You get better decoration in return if that <PRO_RACE> not foolish.~
 END
 IF~NumItemsPartyLT("Misc45",2) CheckStatLT(LastTalkedToBy,12,CHR)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~ EXTERN Bla_ogr4 Boss3
-IF~NumItemsPartyLT("Misc45",2) CheckStatGT(LastTalkedToBy,11,CHR)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~DO~SetGlobal("Bla_WaitRog","LOCALS",1)~ EXTERN Bla_ogr4 Boss8
+IF~NumItemsPartyLT("Misc45",2) CheckStatGT(LastTalkedToBy,11,CHR)~THEN REPLY~I have no two rogue stones with me but I will get them. I will go to Amn and return with the payment.~DO~SetGlobal("Bla_WaitRog","ar1700",1)~ EXTERN Bla_ogr4 Boss8
 IF~PartyHasItem("Misc42")~THEN REPLY~I make you a better offer. This diamond is beautiful and worth twice as much as rogue stones or blue lenses, see how it sparkles.~ EXTERN Bla_ogr4 Boss5
 IF~PartyGoldGT(19999)~THEN REPLY~I make you a better offer. For 20000 GP you can buy your girl anything she can ask for. ~ EXTERN Bla_ogr4 Boss6
 IF~NumItemsPartyGT("Misc45",1)~THEN REPLY~What a luck! Look here, I have two rogue stones with me.~EXTERN Bla_ogr4 Boss7
@@ -71,7 +71,7 @@ IF~~THEN Bla_ogr4 Boss8
 ~Cyrvisnea believes <PRO_RACE>. Will not lie, makes no sense to lie because Sothillis soon rule all of Amn and can punish liar. You come with rogue stones soon and we make deal.~EXIT
 
 CHAIN
-IF~Global("Bla_WaitRog","LOCALS",1)~THEN Bla_ogr4 Boss11
+IF~Global("Bla_WaitRog","ar1700",1)~THEN Bla_ogr4 Boss11
 ~You come with shinies to make exchange for blue lens?~
 END
 IF~NumItemsPartyLT("Misc45",2)~THEN REPLY~I have not found them yet but I'm still searching.~ EXTERN Bla_ogr4 Boss3
