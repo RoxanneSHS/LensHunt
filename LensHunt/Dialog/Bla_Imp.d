@@ -37,6 +37,7 @@ IF~~ THEN Bla_Imp Meet5
 ~Must be a short bow, that's what it's called, but a gooood one, no trash. And ten arrows with acid that hurt the nasties around here.~
 END
 IF~PartyHasItem("bow06")~THEN REPLY~This is a magical shortbow and I can give it to you.~+ Bow1
+IF~OR(4)PartyHasItem("bow06") PartyHasItem("bow14")PartyHasItem("bow15")PartyHasItem("bow18")~THEN REPLY~This is a magical shortbow but I need it still. However I know where I can get one for you as well.~DO~SetGlobal("Bla_ImpHunt","AR2600",2)~+ Meet6
 IF~PartyHasItem("bow14")~THEN REPLY~Here is a bow of Tuigan origin that can be fired faster than a normal one.~+ Bow2
 IF~PartyHasItem("bow15")~THEN REPLY~Tansheron's bow is fitting and it doesn't even need arrows as it spawns phantom arrows when you fire it.~+ Bow3
 IF~PartyHasItem("bow18")~THEN REPLY~This shortbow is the rival of any of the larger bows by the magic embedded in its wood.~+ Bow4
@@ -55,6 +56,7 @@ IF~PartyHasItem("bow14")~THEN REPLY~Here is a bow of Tuigan origin that can be f
 IF~PartyHasItem("bow15")~THEN REPLY~Tansheron's bow is fitting and it doesn't even need arrows as it spawns phantom arrows when you fire it.~+ Bow3
 IF~PartyHasItem("bow18")~THEN REPLY~This shortbow is the rival of any of the larger bows by the magic embedded in its wood.~+ Bow4
 IF~!PartyHasItem("bow14") !PartyHasItem("bow06") !PartyHasItem("bow15") !PartyHasItem("bow18")~THEN REPLY~I have not one of those right now but I know where to get it.~DO~SetGlobal("Bla_ImpHunt","AR2600",2)~+ Meet6
+++~I have no time to waste with an imp. They can't be reasoned with. Give me the lens you found or I take it by force.~DO~SetGlobal("Bla_ImpHunt","AR2600",3)~EXIT
 
 CHAIN
 IF~~ THEN Bla_Imp Bow1
