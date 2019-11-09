@@ -9,6 +9,14 @@ StartDialogNoSet(LastSeenBy(Myself))
 END
 
 IF
+AttackedBy([ANYONE],DEFAULT)
+GlobalLT("Bla_ImpHunt","AR2600",3)
+THEN
+RESPONSE #100
+SetGlobal("Bla_ImpHunt","AR2600",3)
+END
+
+IF
 AreaCheck("AR2600")
 Global("Bla_ImpHunt","AR2600",3)
 THEN
