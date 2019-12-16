@@ -23,7 +23,6 @@ THEN
 RESPONSE #100
 SetGlobal("Bla_ImpHunt","AR2600",4)
 DisplayStringHead(Myself,@108)
-Enemy()
 RunAwayFrom(NearestEnemyOf(Myself),150)
 END
 
@@ -46,6 +45,7 @@ CreateCreatureObjectOffset("goliro01",Player6,[40.40])
 Wait(1)
 EndCutSceneMode()
 SetGlobal("Bla_ImpHunt","AR2600",5)
+Enemy()
 END
 
 IF
