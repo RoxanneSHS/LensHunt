@@ -1,7 +1,7 @@
 BACKUP ~LensHunt/backup~
 AUTHOR ~Roxanne~
 
-VERSION 0.4
+VERSION @109
 
 ALWAYS
  ACTION_DEFINE_ARRAY tra_reload BEGIN setup END
