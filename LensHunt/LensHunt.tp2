@@ -1,14 +1,28 @@
 BACKUP ~LensHunt/backup~
 AUTHOR ~Roxanne~
 
-VERSION ~V0.3~
+VERSION 0.4
 
-AUTO_TRA ~LensHunt/translations/%s~
+ALWAYS
+ ACTION_DEFINE_ARRAY tra_reload BEGIN setup END
+ LAF HANDLE_CHARSETS
+ INT_VAR
+ infer_charset = 1
+ STR_VAR
+ tra_path = EVAL ~%MOD_FOLDER%/tra~
+ reload_array = tra_reload
+ END
+ END
+ AUTO_TRA ~LensHunt/tra/%s~
+
+AUTO_TRA ~LensHunt/tra/%s~
 LANGUAGE ~English~
          ~English~
-         ~LensHunt/translations/setup.tra~
-
-BEGIN ~The Broken Lanthorn~
+         ~LensHunt/tra/english/setup.tra~
+LANGUAGE ~Russian (by Austin)~
+         ~Russian~
+         ~LensHunt/tra/russian/setup.tra~
+BEGIN @110
 
 COPY_EXISTING ~c6lantho.ITM~ ~override/Bla_Lat1.itm~
         SAY NAME1 @100
